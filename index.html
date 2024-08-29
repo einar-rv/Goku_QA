@@ -9,20 +9,19 @@
 <body>
     <div class="quiz-container">
         <div class="quiz-header">
-            <h2 id="question">Pregunta</h2>
-            <img id="question-image" src="" alt="Imagen relacionada">
+            <h2 id="question">Haz clic en "Comenzar" para empezar el cuestionario</h2>
+            <img id="question-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_XsT6_7gyTqVxNDtl_G5jaKnaWdK1z0O1w&s" alt="Imagen relacionada">
         </div>
-        <div class="options">
-            <button class="option" onclick="checkAnswer(0)">Opción 1</button>
-            <button class="option" onclick="checkAnswer(1)">Opción 2</button>
-            <button class="option" onclick="checkAnswer(2)">Opción 3</button>
-            <button class="option" onclick="checkAnswer(3)">Opción 4</button>
+        <div id="options-container" class="options">
+            <!-- Opciones aparecerán aquí -->
+        </div>
+        <button id="start-btn" onclick="startQuiz()">Comenzar</button>
+        <div id="result" class="hidden">
+            <h3>¡Has completado el cuestionario!</h3>
+            <p id="final-score"></p>
+            <p id="final-image"></p>
         </div>
     </div>
-    <div class="result-container" id="result-container">
-        <img src="perdiste.jpg" alt="Perdiste" id="result-image">
-        <button onclick="restartQuiz()">Reintentar</button>
-    </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
