@@ -9,15 +9,19 @@
 <body>
     <div class="quiz-container">
         <div class="quiz-header">
-            <h2 id="question">¿Qué son las pruebas de caja negra?</h2>
-            <img id="question-image" src="imagen.jpg" alt="Imagen relacionada">
+            <h2 id="question">Pregunta</h2>
+            <img id="question-image" src="" alt="Imagen relacionada">
         </div>
         <div class="options">
-            <button class="option" onclick="checkAnswer(this)">Londres</button>
-            <button class="option" onclick="checkAnswer(this)">Berlín</button>
-            <button class="option" onclick="checkAnswer(this)">Madrid</button>
-            <button class="option correct" onclick="checkAnswer(this)">París</button>
+            <button class="option" onclick="checkAnswer(0)">Opción 1</button>
+            <button class="option" onclick="checkAnswer(1)">Opción 2</button>
+            <button class="option" onclick="checkAnswer(2)">Opción 3</button>
+            <button class="option" onclick="checkAnswer(3)">Opción 4</button>
         </div>
+    </div>
+    <div class="result-container" id="result-container">
+        <img src="perdiste.jpg" alt="Perdiste" id="result-image">
+        <button onclick="restartQuiz()">Reintentar</button>
     </div>
     <script src="script.js"></script>
 </body>
