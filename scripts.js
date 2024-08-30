@@ -1,4 +1,4 @@
-console.log("Script "); // Verifica si el script se carga correctamente
+console.log("Script cargado"); // Verifica si el script se carga correctamente
 
 const questions = [
     {
@@ -10,7 +10,7 @@ const questions = [
             "Pruebas que solo verifican la interfaz gráfica del usuario."
         ],
         correct: 0, // Índice de la respuesta correcta
-        image: "/GOKU_QA/img/imagenes/bien 1.jpg"
+        image: "./img/imagenes/bien 1.jpg"
     },
     {
         question: "¿Qué ventajas ofrecen las pruebas de caja negra?",
@@ -21,7 +21,7 @@ const questions = [
             "Son las más adecuadas para probar la seguridad del software."
         ],
         correct: 0,
-        image: "/GOKU_QA/img/imagenes/bien 1-1.jpg"
+        image: "./img/imagenes/bien 1-1.jpg"
     },
     {
         question: "¿Qué son las pruebas de caja blanca?",
@@ -32,7 +32,7 @@ const questions = [
             "Pruebas que se llevan a cabo sin acceso al código fuente."
         ],
         correct: 0,
-        image: "/GOKU_QA/img/imagenes/bien 2.jpg"
+        image: "./img/imagenes/bien 2.jpg"
     },
     {
         question: "¿Cómo se llevan a cabo las pruebas de caja blanca?",
@@ -43,13 +43,13 @@ const questions = [
             "Usando solo herramientas automatizadas sin intervención manual."
         ],
         correct: 0,
-        image: "/GOKU_QA/img/imagenes/bien 2-1.jpg"
+        image: "./img/imagenes/bien 2-1.jpg"
     }
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let previousImage = "/GOKU_QA/img/imagenes/normal.jpg"; // Imagen por defecto al comenzar
+let previousImage = "./img/imagenes/normal.jpg"; // Imagen por defecto al comenzar
 let displayedImages = [];
 
 function startQuiz() {
