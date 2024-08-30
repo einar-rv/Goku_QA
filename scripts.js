@@ -1,24 +1,55 @@
-console.log("Script cargado"); // Verifica si el script se carga correctamente
+console.log("Script "); // Verifica si el script se carga correctamente
 
 const questions = [
     {
-        question: "¿Cuál es la capital de Francia?",
-        options: ["Londres", "Berlín", "Madrid", "París"],
-        correct: 3, // Índice de la respuesta correcta
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh7Jkb_819cPO_SdoXdXMuWFdJO07sWGlUDEdjC8uZuIaW_duc9DCCuYvzmrYYhsJO9Oo&usqp=CAU"
+        question: "¿Qué son las pruebas de caja negra?",
+        options: [
+            "Pruebas que examinan las funcionalidades del software sin conocer su diseño interno, enfocándose en entradas y salidas.",
+            "Pruebas que examinan el código fuente línea por línea.",
+            "Pruebas que solo se realizan después de la implementación.",
+            "Pruebas que solo verifican la interfaz gráfica del usuario."
+        ],
+        correct: 0, // Índice de la respuesta correcta
+        image: "/GOKU_QA/img/imagenes/bien 1.jpg"
     },
     {
-        question: "¿Cuál es el río más largo del mundo?",
-        options: ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
-        correct: 1,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHdJgjnhUaQ4hijerrYNsjsUlBwmmj8aEcsQ&s"
+        question: "¿Qué ventajas ofrecen las pruebas de caja negra?",
+        options: [
+            "No requieren conocer el código fuente, permitiendo enfocarse en requisitos y comportamiento del software.",
+            "Permiten evaluar la eficiencia del código fuente.",
+            "Requieren menos tiempo y recursos que otros tipos de pruebas.",
+            "Son las más adecuadas para probar la seguridad del software."
+        ],
+        correct: 0,
+        image: "/GOKU_QA/img/imagenes/bien 1-1.jpg"
     },
-    // Añade más preguntas aquí
+    {
+        question: "¿Qué son las pruebas de caja blanca?",
+        options: [
+            "Pruebas que evalúan el software con conocimiento detallado del código y su estructura interna.",
+            "Pruebas que solo se centran en la interfaz del usuario.",
+            "Pruebas que no requieren conocimiento técnico avanzado.",
+            "Pruebas que se llevan a cabo sin acceso al código fuente."
+        ],
+        correct: 0,
+        image: "/GOKU_QA/img/imagenes/bien 2.jpg"
+    },
+    {
+        question: "¿Cómo se llevan a cabo las pruebas de caja blanca?",
+        options: [
+            "Mediante la creación de casos de prueba basados en el análisis del código y la estructura interna.",
+            "Con pruebas aleatorias de la funcionalidad del software.",
+            "Verificando únicamente las salidas del sistema.",
+            "Usando solo herramientas automatizadas sin intervención manual."
+        ],
+        correct: 0,
+        image: "/GOKU_QA/img/imagenes/bien 2-1.jpg"
+    }
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let previousImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9q0u17kPz1P52tALyIte_RMEK_pTn05Knw&s"; // Imagen por defecto al comenzar
+let previousImage = "/GOKU_QA/img/imagenes/normal.jpg"; // Imagen por defecto al comenzar
 let displayedImages = [];
 
 function startQuiz() {
