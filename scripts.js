@@ -69,17 +69,30 @@ function loadQuestion() {
         document.getElementById('question-image').src = displayedImages[displayedImages.length - 1] || previousImage;
         document.getElementById('options-container').innerHTML = '';
 
+        // Crear un contenedor de Bootstrap con dos columnas
+        const colClass = 'col-md-6';
+        const row = document.createElement('div');
+        row.className = 'row';
+
         questionData.options.forEach((option, index) => {
+            const col = document.createElement('div');
+            col.className = colClass;
+
             const button = document.createElement('button');
-            button.className = 'option';
+            button.className = 'btn btn-primary btn-block mb-2';
             button.innerText = option;
             button.onclick = () => checkAnswer(index);
-            document.getElementById('options-container').appendChild(button);
+
+            col.appendChild(button);
+            row.appendChild(col);
         });
+
+        document.getElementById('options-container').appendChild(row);
     } else {
         showResult();
     }
 }
+
 
 function checkAnswer(selectedIndex) {
     const questionData = questions[currentQuestionIndex];
